@@ -11,7 +11,24 @@
 #include "stdio.h"
 #include <avr/interrupt.h>
 #include <avr/io.h>
+#include <util/delay.h>
+
+
+#define PRESCALER 		1024			//				f_cpu
+										//	f = ----------------------
+#define OCR_VAL			3125			//			OCR   *   p
+
+
+
+#define TICKS_PULSE			21
+#define TICKS_1_PAUSE		64
+#define TICKS_0_PAUSE		21
+
+
+
 
 void TIMER_carrierFreq_init(void);
+
+void command_hex(uint8_t command);
 
 #endif /* ROUTINES_H_ */
