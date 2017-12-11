@@ -29,6 +29,6 @@
 
 void TIMER_carrierFreq_init(void);
 
-void command_hex(uint8_t command);
+void NEC_out(uint8_t command_hex);
 
 #endif /* ROUTINES_H_ */
