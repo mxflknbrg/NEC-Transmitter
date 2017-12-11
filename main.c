@@ -19,7 +19,7 @@ int main(void)
 	_delay_ms(1000);
 	sei();
 
-	command_hex(0x41);
+	NEC_out(0x41);
 
 	cli();
 	PORTB &= ~(1 << PB7);
