@@ -18,6 +18,7 @@
 										//	f = ----------------------
 #define OCR_VAL			3125			//			OCR   *   p
 
+#define COMP_OUT_MODE	0				//	0 = normal, 1 = toggle
 
 
 #define TICKS_PULSE			21

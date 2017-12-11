@@ -41,6 +41,10 @@ void TIMER_carrierFreq_init(void)
 
 	OCR1A = OCR_VAL;			//Set OCR
 
+#if(COMP_OUT_MODE == 1)
+	TCCR1A |= (1 << COM1A0);	//Toggle OC0A (PB7) on compare match
+#endif
+
 	TIMSK1 |= (1 << OCIE1A);	//Enable interrupt on Timer 1
 
 	sei();						//Enable all interrupts
